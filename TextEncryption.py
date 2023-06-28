@@ -1,4 +1,3 @@
-from cisc108 import assert_equal
 """
 Goal of project is to build some simple functions that encrypt, decrypt, and hash text
 for cryptography purposes.
@@ -157,41 +156,3 @@ def main():
         return print("error")
 
 main()
-
-# ordinal function
-"""
-print("\nORDINAL FUNCTION:")
-assert_equal(ordinal("Hello World!"), [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100, 33])
-assert_equal(ordinal("My name is Michael Lorang"), [77, 121, 32, 110, 97, 109, 101, 32, 105, 115, 32, 77, 105, 99, 104, 97, 101, 108, 32, 76, 111, 114, 97, 110, 103])
-assert_equal(ordinal("I love corgis"), [73, 32, 108, 111, 118, 101, 32, 99, 111, 114, 103, 105, 115])
-
-# character function
-print("\nCHARACTER FUNCTION:")
-assert_equal(character([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100, 33]), "Hello World!")
-assert_equal(character([77, 121, 32, 110, 97, 109, 101, 32, 105, 115, 32, 77, 105, 99, 104, 97, 101, 108, 32, 76, 111, 114, 97, 110, 103]), "My name is Michael Lorang")
-assert_equal(character([73, 32, 108, 111, 118, 101, 32, 99, 111, 114, 103, 105, 115]), "I love corgis")
-
-# rotate function
-print("\nROTATE FUNCTION:")
-assert_equal(rotate([72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100, 33], 5), [77, 106, 113, 113, 116, 37, 92, 116, 119, 113, 105, 38])
-assert_equal(rotate([77, 121, 32, 110, 97, 109, 101, 32, 105, 115, 32, 77, 105, 99, 104, 97, 101, 108, 32, 76, 111, 114, 97, 110, 103], 5), [82, 126, 37, 115, 102, 114, 106, 37, 110, 120, 37, 82, 110, 104, 109, 102, 106, 113, 37, 81, 116, 119, 102, 115, 108])
-assert_equal(rotate([73, 32, 108, 111, 118, 101, 32, 99, 111, 114, 103, 105, 115], 5), [78, 37, 113, 116, 123, 106, 37, 104, 116, 119, 108, 110, 120])
-
-# encrypt_algorithm function
-print("\nENCRYPT_ALGORITHM FUNCTION:")
-assert_equal(encrypt_algorithm("Hello World!", 5), "Mjqqt%~\\twqi&~")
-assert_equal(encrypt_algorithm("My name is Michael Lorang", 5), "R ~%~sfrj%~nx%~Rnhmfjq%~Qtwfsl")
-assert_equal(encrypt_algorithm("I love corgis", 5), "N%~qt{j%~htwlnx")
-
-# decrypt_algorithm function
-print("\nDECRYPT_ALGORITHM FUNCTION:")
-assert_equal(decrypt_algorithm("Mjqqt%~\\twqi&~", 5), "Hello World!")
-assert_equal(decrypt_algorithm("R ~%~sfrj%~nx%~Rnhmfjq%~Qtwfsl", 5), "My name is Michael Lorang")
-assert_equal(decrypt_algorithm("N%~qt{j%~htwlnx", 5), "I love corgis")
-
-# hash_algorithm function
-print("\nHASH_ALOGRITHM FUNCTION:")
-assert_equal(hash_algorithm("Hello World!", 31, 1000000000), 811478700)
-assert_equal(hash_algorithm("My name is Michael Lorang" , 31, 1000000000), 198391187)
-assert_equal(hash_algorithm("I love corgis" , 31, 1000000000), 278903485)
-"""
